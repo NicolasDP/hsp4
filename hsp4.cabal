@@ -1,0 +1,30 @@
+name:                hsp4
+version:             0.1.0.0
+synopsis:            Initial project for Git-P4 tool usage
+description:         Please see README.md
+homepage:            http://github.com/NicolasDP/hsp4#README.md
+license:             BSD3
+license-file:        LICENSE
+author:              Nicolas Di Prima
+maintainer:          nicolas@di-prima.fr
+copyright:           2015 Nicolas Di Prima
+category:            Web
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+executable hsp4
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  other-modules:       Config
+                     , Data.String.Parse
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , directory
+                     , filepath
+                     , process
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/NicolasDP/hsp4
